@@ -183,6 +183,7 @@ const KEY_CODES = {
   RIGHT: 'ArrowRight',
   UP: 'ArrowUp',
   DOWN: 'ArrowDown',
+  ENTER: 'Enter'
 };
 
 const WHITE_COLOR_ID = 7;
@@ -432,6 +433,9 @@ document.getElementById('play').addEventListener('click', () => {
   }, 1000);
 })
 
+document.addEventListener('keydown2', (e) => {
+  
+})
 
 document.addEventListener('keydown', (e) => {
   if (!board.gameOver && board.isPlaying) {
@@ -447,6 +451,9 @@ document.addEventListener('keydown', (e) => {
         brick.moveDown();
         break;
       case KEY_CODES.UP:
+        brick.rotate();
+        break;
+      case KEY_CODES.ENTER:
         brick.rotate();
         break;
       default:
